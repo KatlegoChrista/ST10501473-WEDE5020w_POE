@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+
+        <!--to fit landing page on a mobile device-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Enquiry</title>
+    </head>
+
+    <body>
+        <header>
+       <!-- Logo links back to the Home page -->
+        <a href="index.html">
+            <img src="Images/Logo.png" width="100" alt="Sprinkle Sprinkle logo">
+        </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Customer Details -->
+<form>
+<section>
+    <h2>Customer Details</h2>
+
+        <div>
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" placeholder="Please enter your name" required>
+        </div>
+
+        <div>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+        </div>
+
+    <div>
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" placeholder="071 234 5678" required>
+    </div>
+</section>
+
+    <!--Order details-->
+<section>
+    <h2>Order Details</h2>
+    <p>What would you like to order?</p>
+
+    <h3>Product</h3>
+
+    <div>
+        <label>
+            <input type="checkbox" name="product" value="cupcakes">
+            Cupcakes
+        </label>
+
+        <select id="cupcake-size" name="cupcake-size">
+            <option value="">Please select a box size</option>
+            <option value="6">Box of 6</option>
+            <option value="12">Box of 12</option>
+        </select><br>
+
+        <label>
+            <input type="checkbox" name="product" value="bento">
+            Bento Cakes
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="product" value="custom-cakes">
+            Custom Cakes
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="product" value="desserts">
+            Desserts
+        </label>
+
+        <select id="dessert-choice" name="dessert-choice">
+            <option value="">Please select a dessert</option>
+            <option value="banana-loaf">Banana Loaf</option>
+            <option value="plain-brownies">Plain Brownies</option>
+            <option value="chocolate-coated-brownies">Chocolate-Coated Brownies</option>
+            <option value="premium-brownie-trio">Premium Brownie Trio</option>
+        </select>
+    </div><br>
+</section>
+
+<section>
+
+    <h2>Customisation</h2>
+
+    <div>
+        <label for="occasion">Occasion:</label>
+        <select id="occasion" name="occasion" required>
+            <option value="">Please select an occasion</option>
+            <option value="birthday">Birthday</option>
+            <option value="graduation">Graduation</option>
+            <option value="wedding">Wedding</option>
+            <option value="baby-shower">Baby Shower</option>
+            <option value="anniversary">Anniversary</option>
+            <option value="other">Other</option>
+        </select>
+    </div><br>
+
+    <div>
+        <h3>Cake Flavour</h3>
+
+        <label>
+            <input type="radio" name="cake-flavour" value="red-velvet">
+            Red Velvet
+        </label>
+
+        <label>
+            <input type="radio" name="cake-flavour" value="chocolate">
+            Chocolate
+        </label>
+
+        <label>
+            <input type="radio" name="cake-flavour" value="vanilla">
+            Vanilla
+        </label>
+    </div><br>
+
+    <div>
+        <h3>Frosting</h3>
+
+        <label>
+            <input type="radio" name="frosting" value="swiss-meringue-buttercream">
+            Swiss Meringue Buttercream
+        </label>
+
+        <label>
+            <input type="radio" name="frosting" value="cream-cheese">
+            Cream Cheese
+        </label>
+
+        <label>
+            <input type="radio" name="frosting" value="cookies-and-cream">
+            Cookies and Cream
+        </label>
+    </div><br>
+
+    <!-- Filling -->
+    <div>
+        <h3>Filling (optional)</h3>
+
+        <label>
+            <input type="radio" name="filling" value="caramel">
+            Caramel
+        </label>
+
+        <label>
+            <input type="radio" name="filling" value="chocolate-ganache">
+            Chocolate Ganache
+        </label>
+
+        <label>
+            <input type="radio" name="filling" value="strawberry-compote">
+            Strawberry Compote
+        </label>
+    </div><br>
+
+    <div>
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+    </div><br>
+
+    <div>
+        <label for="design">Colour and Design Description:</label>
+        <textarea
+            id="design"
+            name="design"
+            rows="5"
+            cols="40"
+            placeholder="Please describe your preferred colours, theme or design."></textarea>
+    </div><br>
+
+    <div>
+        <label for="inspiration">Upload an Inspiration Photo:</label>
+        <input
+            type="file"
+            id="inspiration"
+            name="inspiration"
+            accept="image/*">
+    </div>
+
+</section>
+
+<!-- Delivery / Collection -->
+<section>
+
+    <h2>Delivery or Collection</h2>
+
+    <div>
+        <label>
+            <input type="radio" name="delivery-method" value="delivery" required>
+            Delivery
+        </label>
+
+        <label>
+            <input type="radio" name="delivery-method" value="collection">
+            Collection
+        </label>
+    </div>
+
+    <br>
+
+    <div>
+        <label for="delivery-address">Delivery Address:</label>
+        <textarea
+            id="delivery-address"
+            name="delivery-address"
+            rows="4"
+            cols="40"
+            placeholder="Please enter your delivery address."></textarea>
+    </div>
+
+</section>
+
+<!-- Dietary Requirements -->
+<section>
+
+    <h2>Dietary Requirements</h2>
+
+    <div>
+        <label for="allergies">Allergies:</label>
+        <textarea
+            id="allergies"
+            name="allergies"
+            rows="4"
+            cols="40"
+            placeholder="Please list any allergies or write 'None'."></textarea>
+    </div><br>
+
+    <div>
+        <label for="dietary">Dietary Requirements:</label>
+        <textarea
+            id="dietary"
+            name="dietary"
+            rows="4"
+            cols="40"
+            placeholder="Please tell us about any dietary requirements."></textarea>
+    </div>
+
+</section>
+
+<!-- Additional Information -->
+<section>
+
+    <h2>Additional Information</h2>
+
+    <div>
+        <label for="additional-notes">Additional Notes:</label>
+        <textarea
+            id="additional-notes"
+            name="additional-notes"
+            rows="5"
+            cols="40"
+            placeholder="Is there anything else you would like us to know?"></textarea>
+    </div><br>
+
+</section>
+
+<!-- Confirmation -->
+<section>
+
+    <div>
+        <label>
+            <input type="checkbox" name="policy" required>
+            I have read and agree to the
+            <a href="policy.html">Sprinkle Sprinkle Policy</a>.
+        </label>
+    </div><br>
+
+    <button type="submit">Send Enquiry</button>
+
+</section>
+</form>
+</main>
+
+        <footer>
+                <p>A little sprinkle of sweetness.</p>
+
+                <address>Klipfontein View, Midrand, 1685</address>
+
+             <p>© 2026 Sprinkle Sprinkle. All Rights Reserved.</p>
+            </footer>
+    </body>
+</html>
