@@ -15,7 +15,7 @@ Sprinkle Sprinkle is a small baking business specialising in custom baked cakes 
 
 The business does not currently have a website. The purpose of this project is to create a visually appealing website that showcases Sprinkle Sprinkle's products and makes it easy for customers to enquire about and place orders, strengthening the business's online presence.
 
-This repository contains **Part 1** of the Website Project PoE, which focuses on planning, research, content gathering and building the HTML structure of the website.
+This repository contains **Part 1** of the Website Project POE, which focuses on planning, research, content gathering and building the HTML structure of the website and **Part 2** (CSS styling and responsive design) of the Website Project POE.
 
 ---
 
@@ -56,18 +56,40 @@ The website consists of six HTML pages, linked by a consistent navigation menu o
 
 The website uses a soft, welcoming design intended to reflect the Sprinkle Sprinkle bakery brand.
 
-**Colour scheme** (based on the business logo): light pink, brown and white.
+
+**Colour scheme** (based on the business logo): light pink, brown and cream/white, applied consistently across headers, buttons, cards and the footer using CSS custom properties (variables) for easy maintenance.
+
+**Typography:** "Fraunces" (a soft serif) for headings, and "Karla" (a clean sans-serif) for body text, both loaded from Google Fonts.
+
+**Layout:** built with a combination of Flexbox and CSS Grid, including a responsive product card grid and a flexible hero section.
+
+**Responsive design:** the layout adapts across three breakpoints — desktop, tablet (900px) and mobile (640px) — using relative units (`rem`, `%`, `clamp()`) so text and spacing scale smoothly between screen sizes.
 
 Each page follows a consistent structure of header (logo + navigation), main content area, and footer with the business address and copyright notice.
 
 ---
 
+---
+
+## Responsive Design Screenshots
+
+**Desktop**
+![Desktop view of the Sprinkle Sprinkle homepage](./Screenshots/Desktop.png)
+
+**Tablet**
+![Tablet view of the Sprinkle Sprinkle homepage](./Screenshots/Tablet.png)
+
+**Phone**
+![Phone view of the Sprinkle Sprinkle homepage](./Screenshots/Phone.png)
+
+
 ## Technical Requirements
 
 * **HTML** — used to build the structure and content of all six pages.
-* **CSS** — planned for a later part of the project to style the website.
-* **JavaScript** — planned for a later part of the project to add interactivity, including enquiry form handling.
-* **Visual Studio Code** — used to create and edit the website files.
+* **CSS** — used to style the website via a single external stylesheet (`style.css`), including a CSS reset, custom properties, typography, layout (Flexbox/Grid), visual styling, interactive states (`:hover`, `:focus-visible`, `:active`), and responsive breakpoints.
+* **Google Fonts** — used to load the Fraunces and Karla typefaces.
+* **JavaScript** — planned for a later part of the project to add interactivity, including enquiry form validation and submission handling.
+* **Visual Studio Code** — used to create and edit the website files, with browser DevTools used to test and refine CSS during development.
 * **Git / GitHub** — used for version control and to store the project.
 * **Web Hosting & Domain** — a `.co.za` domain and basic web hosting have been researched for future deployment.
 
@@ -82,7 +104,9 @@ Each page follows a consistent structure of header (logo + navigation), main con
   * `enquiry.html`
   * `contact.html`
   * `policy.html`
+  * `style.css`
   * `README.md`
+  * `CHANGELOG.md`
   * **Images/**
     * `Logo.png`
     * `Homepage-hero.jpg`
@@ -106,7 +130,7 @@ Each page follows a consistent structure of header (logo + navigation), main con
   * `ST10501473 proposal.docx`
   * `Wireframe.pdf`
 
----
+--- 
 
 ## Sitemap
 
@@ -119,6 +143,28 @@ Each page follows a consistent structure of header (logo + navigation), main con
 
 ---
 
+## CSS Features
+
+The CSS was used to improve the appearance and layout of the website.
+
+The stylesheet includes:
+*CSS reset.
+*CSS variables for colours and fonts.
+*Typography styling.
+*Header and navigation styling.
+*Button styling.
+*Homepage hero section.
+*About section styling.
+*Product cards and product previews.
+*Enquiry and contact sections.
+*Enquiry form styling.
+*Policy page styling.
+*Footer styling.
+*Responsive design for smaller screens.
+*Reduced-motion support.
+
+The website uses the Fraunces and Karla fonts from Google Fonts.
+
 ## Timeline and Milestones
 
 * **14/08/26** — Choose organisation *(Completed)*
@@ -126,23 +172,18 @@ Each page follows a consistent structure of header (logo + navigation), main con
 * **19/08/26** — Create HTML files and folders and add website content *(Completed)*
 * **20/08/26** — Test website and fix errors *(Completed)*
 * **21/08/26** — Review PoE Part 1 and prepare submission *(Completed)*
+* **21/09/26** — Prepare README and folder structure for GitHub *(Completed)*
+* **22/09/26** — Create external stylesheet, apply colour scheme and typography *(Completed)*
+* **23/09/26** — Build layout and responsive styling across all pages *(Completed)*
+* **24/09/26** — Test and correct CSS across all pages and screen sizes *(Completed)*
+* **25/09/26** — Finalise CHANGELOG and README for Part 2 submission *(Completed)*
 
 ---
 
 ## Changelog
 
-### Part 1 – August 2026
 
-* Selected Sprinkle Sprinkle as the target organisation and wrote the project proposal.
-* Researched the organisation, website requirements, and domain/hosting costs.
-* Sourced and downloaded website images from Unsplash and Pexels.
-* Created the wireframe for the site layout.
-* Built the six HTML pages (`index`, `about`, `products`, `enquiry`, `contact`, `policy`) with shared navigation.
-* Added the customer enquiry form, including product selection, customisation options, delivery/collection choice, dietary requirements, and inspiration-photo upload.
-* Added the Sprinkle Sprinkle Policy page.
-* Organised the project folder structure and images.
-* Tested navigation links across all pages.
-* Prepared the project for GitHub submission.
+* A separate `CHANGELOG.md` file has been included in the project to record the main changes and development stages of the website.
 
 ---
 
