@@ -69,8 +69,6 @@ Each page follows a consistent structure of header (logo + navigation), main con
 
 ---
 
----
-
 ## Responsive Design Screenshots
 
 **Desktop**
