@@ -532,11 +532,6 @@ footer p:first-child {
     text-align: center;
   }
 
-  .about-photo {
-    float: none;
-    margin: 0 auto 1.5rem;
-  }
-
   main {
     padding: 0 5vw 3rem;
   }
@@ -572,4 +567,780 @@ footer p:first-child {
   * {
     transition: none !important;
   }
+}
+
+/* Enquiry button once form has been submitted */
+
+.result-again {
+  background: var(--pink);
+  color: var(--white);
+  font-weight: 700;
+  padding: 0.75rem 1.8rem;
+  border-radius: 999px;
+  margin-top: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.result-again:hover {
+  background: var(--pink-deep);
+}
+
+/* ---------- Contact form ---------- */
+
+.contact-form {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem 2rem;
+  margin-top: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-form[hidden] {
+  display: none;
+}
+
+.contact-form > div {
+  margin-bottom: 1.1rem;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--cream);
+  color: var(--brown);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus-visible,
+.contact-form select:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 1px;
+  border-color: var(--pink);
+}
+
+/* Fields that fail validation (the messages themselves use .field-error) */
+
+.contact-form .input-invalid {
+  outline: 2px solid var(--pink-deep);
+  outline-offset: 1px;
+}
+
+.contact-form input.input-invalid,
+.contact-form select.input-invalid,
+.contact-form textarea.input-invalid {
+  border-color: var(--pink-deep);
+}
+
+.char-count {
+  color: var(--brown-soft);
+  font-size: 0.85rem;
+  margin: 0.25rem 0 0;
+  max-width: none;
+  text-align: right;
+}
+
+.contact-form button[type="submit"] {
+  margin-top: 0.5rem;
+}
+
+/* ---------- Contact form: the email that is ready to send ---------- */
+
+.contact-result {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem 2rem;
+  margin-top: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-result label {
+  display: block;
+  font-weight: 600;
+  margin: 1rem 0 0.35rem;
+}
+
+.email-preview {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--cream);
+  color: var(--brown);
+  resize: vertical;
+}
+
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.result-open,
+.result-copy,
+.result-edit {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.7rem 1.6rem;
+  border: 2px solid var(--pink);
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.result-open {
+  background: var(--pink);
+  color: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.result-copy,
+.result-edit {
+  background: var(--white);
+  color: var(--pink-deep);
+}
+
+.result-open:hover,
+.result-copy:hover,
+.result-edit:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.result-open:hover {
+  background: var(--pink-deep);
+  border-color: var(--pink-deep);
+}
+
+.result-copy:hover,
+.result-edit:hover {
+  background: var(--blush-soft);
+}
+
+@media (max-width: 640px) {
+  .contact-form,
+  .contact-result {
+    padding: 1.25rem 1.1rem 1.5rem;
+  }
+}
+
+/* ---------- Contact page: map ---------- */
+
+.map {
+  height: 380px;
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  background: var(--blush-soft);
+  overflow: hidden;
+  /* Keeps the map's layers underneath the sticky header when you scroll. */
+  position: relative;
+  z-index: 0;
+}
+
+/* The message that shows if the map cannot load */
+.map > p {
+  max-width: none;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Your site-wide image rules would round every map tile, so switch them off here. */
+.leaflet-container img {
+  border-radius: 0;
+}
+
+.leaflet-container {
+  font-family: var(--font-body);
+}
+
+.map-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.map-button,
+.map-link {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.7rem 1.6rem;
+  border: 2px solid var(--pink);
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.map-button {
+  background: var(--pink);
+  color: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.map-link {
+  background: var(--white);
+  color: var(--pink-deep);
+}
+
+.map-button:hover,
+.map-link:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.map-button:hover {
+  background: var(--pink-deep);
+  border-color: var(--pink-deep);
+}
+
+.map-link:hover {
+  background: var(--blush-soft);
+}
+
+.map-status {
+  color: var(--brown-soft);
+  margin-top: 0.75rem;
+}
+
+.map-status:empty {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .map {
+    height: 300px;
+  }
+}
+
+/* ---------- Policy page: accordion ---------- */
+
+/* Each policy section is now a closed row, so drop the old section padding. */
+.page-policy .accordion-item {
+  padding: 0;
+}
+
+.page-policy .accordion-item h2 {
+  margin: 0;
+}
+
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.25rem 0;
+  background: none;
+  border: none;
+  color: var(--brown);
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.accordion-trigger:hover {
+  color: var(--pink-deep);
+}
+
+.accordion-icon {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: var(--blush-soft);
+  color: var(--pink-deep);
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.3s ease, background 0.2s ease;
+}
+
+.accordion-trigger:hover .accordion-icon {
+  background: var(--blush);
+}
+
+/* The plus turns into a cross when the section is open. */
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  transform: rotate(45deg);
+}
+
+/* The panel slides open by growing from 0 to its full height. */
+.accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.accordion-panel.is-open {
+  grid-template-rows: 1fr;
+}
+
+/* "visibility" hides closed text from the keyboard and screen readers. */
+.accordion-panel-inner {
+  overflow: hidden;
+  visibility: hidden;
+  transition: visibility 0.3s;
+}
+
+.accordion-panel.is-open .accordion-panel-inner {
+  visibility: visible;
+}
+
+.accordion-panel-inner > :last-child {
+  margin-bottom: 1.25rem;
+}
+
+/* Expand all / Collapse all */
+.accordion-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.accordion-control {
+  padding: 0.55rem 1.4rem;
+  border: 2px solid var(--pink);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--pink-deep);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.accordion-control:hover {
+  background: var(--blush-soft);
+  transform: translateY(-2px);
+}
+
+/* ---------- Products page: search, filter and sort ---------- */
+
+.product-tools {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem 1.25rem;
+  align-items: end;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0 1.75rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* "display: grid" above would otherwise beat the hidden attribute */
+.product-tools[hidden] {
+  display: none;
+}
+
+.tool-field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.tool-field input,
+.tool-field select {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--cream);
+  color: var(--brown);
+}
+
+.tool-field input:focus-visible,
+.tool-field select:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 1px;
+  border-color: var(--pink);
+}
+
+.product-count {
+  grid-column: 1 / -1;
+  max-width: none;
+  margin: 0;
+  color: var(--brown-soft);
+  font-size: 0.95rem;
+}
+
+/* ---------- Products page: product cards ---------- */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+}
+
+/* The photo is a button so it works with the keyboard too. */
+.product-photo {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  background: var(--blush-soft);
+  cursor: zoom-in;
+}
+
+.product-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.product-photo:hover img {
+  transform: scale(1.04);
+}
+
+.photo-count {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(74, 46, 31, 0.82);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.product-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.25rem 1.4rem 1.5rem;
+}
+
+.product-category-tag {
+  align-self: flex-start;
+  max-width: none;
+  margin-bottom: 0.6rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: var(--blush-soft);
+  color: var(--pink-deep);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.product-name {
+  margin-bottom: 0.4rem;
+  font-size: 1.3rem;
+}
+
+.product-description {
+  flex: 1;
+}
+
+.product-price {
+  margin-bottom: 0.9rem;
+  color: var(--pink-deep);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+
+.product-enquire {
+  align-self: flex-start;
+  padding: 0.55rem 1.4rem;
+  border: 2px solid var(--pink);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--pink-deep);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.product-enquire:hover {
+  background: var(--blush-soft);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.product-note {
+  max-width: none;
+  margin-top: 1.5rem;
+  color: var(--brown-soft);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Nothing matched the search */
+.product-empty {
+  padding: 2.5rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  text-align: center;
+}
+
+.product-empty p {
+  max-width: none;
+  margin-bottom: 1rem;
+}
+
+.product-clear {
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  background: var(--pink);
+  color: var(--white);
+  font-weight: 700;
+  box-shadow: var(--shadow-soft);
+}
+
+.product-clear:hover {
+  background: var(--pink-deep);
+}
+
+/* ---------- Products page: photo viewer (lightbox) ---------- */
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(74, 46, 31, 0.88);
+}
+
+.lightbox-figure {
+  position: relative;
+  max-width: min(92vw, 1000px);
+  margin: 0;
+  text-align: center;
+}
+
+.lightbox-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 75vh;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-caption {
+  margin-top: 0.9rem;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.lightbox-count {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  max-width: none;
+  margin: 0;
+  color: var(--blush-soft);
+  font-size: 0.9rem;
+  transform: translateX(-50%);
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--pink-deep);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: background 0.15s ease;
+}
+
+.lightbox-prev[hidden],
+.lightbox-next[hidden] {
+  display: none;
+}
+
+.lightbox-close {
+  top: 1rem;
+  right: 1rem;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-prev {
+  left: 1rem;
+}
+
+.lightbox-next {
+  right: 1rem;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: var(--blush-soft);
+}
+
+/* ---------- Products page: smaller screens ---------- */
+
+@media (max-width: 900px) {
+  .product-tools {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tool-search {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-tools {
+    grid-template-columns: 1fr;
+    padding: 1.1rem;
+  }
+
+  .lightbox {
+    padding: 1rem;
+  }
+
+  .lightbox-image {
+    max-height: 62vh;
+  }
+
+  /* On a phone the arrows sit at the bottom, out of the way of the photo. */
+  .lightbox-prev,
+  .lightbox-next {
+    top: auto;
+    bottom: 1rem;
+    transform: none;
+  }
+}
+
+/* ---------- Products page: simple search ---------- */
+
+.product-search {
+    max-width: 520px;
+    margin: 1rem auto 2rem;
+}
+
+.product-search label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    text-align: left;
+}
+
+.product-search input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--brown);
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.product-search input:focus-visible {
+    outline: 3px solid var(--pink);
+    outline-offset: 2px;
+    border-color: var(--pink);
+}
+
+.form-status {
+  background: var(--blush-soft);
+  color: var(--brown);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+/* ---------- Product photos: lightbox (large photo viewer) ---------- */
+/* The only change to the page itself: the pointer shows the photo can be enlarged. */
+.lightbox-thumb {
+  cursor: zoom-in;
 }

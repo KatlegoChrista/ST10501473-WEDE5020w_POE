@@ -6,7 +6,7 @@
 **Student Name:** Katlego Christa Mahlabegoane <br>
 **Module:** WEDE5020w
 
-
+ 
 ---
 
 ## Project Overview
@@ -15,7 +15,7 @@ Sprinkle Sprinkle is a small baking business specialising in custom baked cakes 
 
 The business does not currently have a website. The purpose of this project is to create a visually appealing website that showcases Sprinkle Sprinkle's products and makes it easy for customers to enquire about and place orders, strengthening the business's online presence.
 
-This repository contains **Part 1** of the Website Project POE, which focuses on planning, research, content gathering and building the HTML structure of the website and **Part 2** (CSS styling and responsive design) of the Website Project POE.
+This repository contains Parts 1, 2 and 3 of the Website Project POE. ***Part 1*** focused on planning, research, content gathering and building the HTML structure of the website. ***Part 2*** focused on CSS styling and responsive design. ***Part 3*** focused on adding JavaScript functionality, form validation, user interaction and SEO improvements.
 
 ---
 
@@ -45,10 +45,10 @@ The website consists of six HTML pages, linked by a consistent navigation menu o
 
 * **Home** (`index.html`) — Hero banner, short "About" teaser, product category previews (Cupcakes, Bento, Custom Cakes, Desserts), and call-to-action links through to the Enquiry and Contact pages.
 * **About Us** (`about.html`) — Background on Sprinkle Sprinkle, its mission, and a photo of the baker at work.
-* **Products** (`products.html`) — Product categories (Cupcakes, Bento Cakes, Custom Cakes, Desserts) with photos, descriptions, starting prices and an "Enquire" link for each category.
-* **Enquiry** (`enquiry.html`) — A detailed enquiry form covering customer details, product/order selection, cake flavour/frosting/filling customisation, occasion, preferred date, design description, an inspiration image upload, delivery vs collection, delivery address, dietary requirements/allergies, additional notes, and a required policy-agreement checkbox before submission.
-* **Contact** (`contact.html`) — Business email, phone number and physical location, plus a link through to the Enquiry form.
-* **Policy** (`policy.html`) — Terms covering orders and enquiries, lead times, deposits and payments, custom designs, allergies, delivery and collection, delivery charges, cancellations and refunds, order changes, and product variation.
+* **Products** (`products.html`) — Product categories (Cupcakes, Bento Cakes, Custom Cakes, Desserts) with photos, descriptions, starting prices and an "Enquire" link for each category. JavaScript functionality allows customers to search, filter and sort products. Product images can also be viewed in an interactive lightbox with captions and navigation controls.
+* **Enquiry** (`enquiry.html`) — A detailed enquiry form covering customer details, product/order selection, cake flavour/frosting/filling customisation, occasion, preferred date, design description, an inspiration image upload, delivery vs collection, delivery address, dietary requirements/allergies, additional notes, and a required policy-agreement checkbox before submission. JavaScript validates the form fields, checks the information entered and displays a personalised confirmation after successful submission.
+* **Contact** (`contact.html`) — Business email, phone number and physical location, plus a link through to the Enquiry form. The contact form includes JavaScript validation, a character counter and submission feedback.
+* **Policy** (`policy.html`) — Terms covering orders and enquiries, lead times, deposits and payments, custom designs, allergies, delivery and collection, delivery charges, cancellations and refunds, order changes, and product variation. JavaScript accordion functionality allows customers to expand and collapse policy sections.
 
 ---
 
@@ -66,6 +66,10 @@ The website uses a soft, welcoming design intended to reflect the Sprinkle Sprin
 **Responsive design:** the layout adapts across three breakpoints — desktop, tablet (900px) and mobile (640px) — using relative units (`rem`, `%`, `clamp()`) so text and spacing scale smoothly between screen sizes.
 
 Each page follows a consistent structure of header (logo + navigation), main content area, and footer with the business address and copyright notice.
+
+JavaScript was also used to improve the user experience through interactive product browsing, image lightboxes, expandable policy sections and form feedback. Accessibility was considered by including keyboard controls, visible focus states and reduced-motion support.
+
+---
 
 ---
 
@@ -85,11 +89,13 @@ Each page follows a consistent structure of header (logo + navigation), main con
 
 * **HTML** — used to build the structure and content of all six pages.
 * **CSS** — used to style the website via a single external stylesheet (`style.css`), including a CSS reset, custom properties, typography, layout (Flexbox/Grid), visual styling, interactive states (`:hover`, `:focus-visible`, `:active`), and responsive breakpoints.
+* **JavaScript** — used to add interactive functionality, including product search, filtering and sorting, image lightboxes, policy accordions, form validation, character counters and submission handling.
+* **SEO** — implemented through page-specific titles and meta descriptions, appropriate heading structure, descriptive image alt text, internal links, a `robots.txt` file and an XML sitemap (`sitemap.xml`).
 * **Google Fonts** — used to load the Fraunces and Karla typefaces.
 * **JavaScript** — planned for a later part of the project to add interactivity, including enquiry form validation and submission handling.
 * **Visual Studio Code** — used to create and edit the website files, with browser DevTools used to test and refine CSS during development.
 * **Git / GitHub** — used for version control and to store the project.
-* **Web Hosting & Domain** — a `.co.za` domain and basic web hosting have been researched for future deployment.
+* **Web Hosting** — GitHub Pages will be used to deploy the completed website for free.
 
 ---
 
@@ -103,22 +109,26 @@ Each page follows a consistent structure of header (logo + navigation), main con
   * `contact.html`
   * `policy.html`
   * `style.css`
+  * `robots.txt`
+  * `sitemap.xml`
   * `README.md`
   * `CHANGELOG.md`
+  * **js**
+    * `script.js`
   * **Images/**
     * `Logo.png`
     * `Homepage-hero.jpg`
-    * `about.jpg`
+    * `sprinkle-sprinkle-about.jpg`
     * `cupcake-preview.jpg`
-    * `cupcakes-6.jpeg`
-    * `cupcakes-12.jpg`
-    * `bento-preview.jpg`
-    * `bento1.jpg`
-    * `bento2.jpg`
+    * `cupcakes-box-6.jpeg`
+    * `cupcakes-box-12.jpg`
+    * `bento-cakes-preview.jpg`
+    * `piggy-bento-cake1.jpg`
+    * `blue-calender-bento-cake2.jpg`
     * `custom-cake-preview.jpg`
-    * `custom1.jpg`
-    * `custom2.jpg`
-    * `custom3.jpg`
+    * `heart-custom-cake1.jpg`
+    * `babyshower-custom-cake2.jpg`
+    * `pink-custom-cake3.jpg`
     * `dessert-preview.jpg`
     * `banana-loaf.jpg`
     * `brownies.jpg`
@@ -143,23 +153,25 @@ Each page follows a consistent structure of header (logo + navigation), main con
 
 ## CSS Features
 
-The CSS was used to improve the appearance and layout of the website.
+The CSS was used to improve the appearance, layout and responsiveness of the website.
 
 The stylesheet includes:
-*CSS reset.
-*CSS variables for colours and fonts.
-*Typography styling.
-*Header and navigation styling.
-*Button styling.
-*Homepage hero section.
-*About section styling.
-*Product cards and product previews.
-*Enquiry and contact sections.
-*Enquiry form styling.
-*Policy page styling.
-*Footer styling.
-*Responsive design for smaller screens.
-*Reduced-motion support.
+
+* CSS reset.
+* CSS variables for colours and fonts.
+* Typography styling.
+* Header and navigation styling.
+* Button styling and interactive states.
+* Homepage hero section.
+* About section styling.
+* Product cards and product previews.
+* Enquiry and contact sections.
+* Enquiry form styling.
+* Policy page styling.
+* Footer styling.
+* Responsive design for smaller screens using media queries.
+* Keyboard focus styling.
+* Reduced-motion support.
 
 The website uses the Fraunces and Karla fonts from Google Fonts.
 
@@ -175,6 +187,12 @@ The website uses the Fraunces and Karla fonts from Google Fonts.
 * **23/09/26** — Build layout and responsive styling across all pages *(Completed)*
 * **24/09/26** — Test and correct CSS across all pages and screen sizes *(Completed)*
 * **25/09/26** — Finalise CHANGELOG and README for Part 2 submission *(Completed)*
+* **31/10/26** — Add JavaScript functionality, including product search, filtering and sorting, image lightboxes and policy accordions *(Completed)*
+* **01/11/26** — Implement JavaScript form validation, character counters and submission handling *(Completed)*
+* **01/11/26** — Apply SEO improvements, including page titles, meta descriptions, image alt text, `robots.txt` and `sitemap.xml` *(Completed)*
+* **02/11/26** — Test website functionality, forms and responsive layouts *(Completed)*
+* **02/11/26** — Update README and CHANGELOG for Part 3 *(Completed)*
+* **02/11/26** — Deploy the website using GitHub Pages *(Completed)*
 
 ---
 

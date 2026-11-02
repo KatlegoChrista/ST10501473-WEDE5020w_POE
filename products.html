@@ -1,83 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-     <head>
-        <meta charset="utf-8"/>
 
-        <!--to fit page on a mobile device-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"  href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <title>Products</title>
-    </head>
+<head>
+    <meta charset="utf-8" />
 
-    <body class="page-products">
-         <header>
-            
-       <!-- Logo links back to the Home page -->
-              <a href="index.html">
-             <img src="Images/Logo.png" width="100" alt="Sprinkle Sprinkle logo">
-             </a>
-           
-             <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="products.html">Products</a>
-                <a href="enquiry.html">Enquiry</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
+    <!--to fit page on a mobile device-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Cakes, Cupcakes &amp; Brownies | Sprinkle Sprinkle Products</title>
+    <meta name="description"
+        content="Browse custom cakes, bento cakes, cupcakes, banana loaf and brownies from Sprinkle Sprinkle in Midrand. Search, compare prices and enquire.">
+    <meta name="keywords"
+        content="custom cakes, bento cakes, cupcakes, banana loaf, brownies, cake prices, bakery Midrand">
 
-        <main>
-            <div class="products-intro">
-                <h1>Our products</h1>
-                <p>Discover something sweet for every moment.</p>
+
+    <script src="js/script.js" defer></script>
+</head>
+
+<body class="page-products">
+    <header>
+
+        <!-- Logo links back to the Home page -->
+        <a href="index.html">
+            <img src="Images/Logo.png" width="100" alt="Sprinkle Sprinkle logo">
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="products-intro">
+            <h1>Our products</h1>
+            <p>Discover something sweet for every moment.</p>
+        </div>
+
+        <div class="product-tools">
+
+            <div class="product-search tool-field tool-search">
+                <label for="product-search">Find something sweet</label>
+                <input type="search" id="product-search" placeholder="Search our products...">
             </div>
 
+            <div class="product-filter tool-field">
+                <label for="category-filter">Browse by category</label>
+                <select id="category-filter">
+                    <option value="all">All products</option>
+                    <option value="cupcakes">Cupcakes</option>
+                    <option value="bento">Bento Cakes</option>
+                    <option value="custom">Custom Cakes</option>
+                    <option value="desserts">Desserts</option>
+                </select>
+            </div>
+
+            <div class="product-sort tool-field">
+                <label for="product-sort">Sort categories</label>
+                <select id="product-sort">
+                    <option value="default">Default order</option>
+                    <option value="az">A to Z</option>
+                    <option value="za">Z to A</option>
+                </select>
+            </div>
+
+        </div>
+        <div id="product-list">
             <section class="product-category">
                 <h2>Cupcakes</h2>
-                 
-            <div class="product-images">
-                <img src="Images/cupcakes-6.jpeg" alt="Box of 6 assorted cupcakes" width="300">
-
-                <img src="Images/cupcakes-12.jpg" alt="Box of 12 assorted cupcakes" width="300">
-            </div>
-
-            <div class="product-info">
-                <p>
-                    Sweet, freshly baked cupcakes made for celebrations,
-                    gifts and everyday treats.
-                </p>
-
-                <p>
-                    Available in boxes of 6 or 12.
-                </p>
-
-                <p>
-                    Box of 6: from R180<br>
-                    Box of 12: from R340
-                </p>
-
-                <p>
-                    <small>
-                        Flavour choices may affect the final price.
-                        Boxes of 12 may include up to 2 flavours.
-                        Additional add-ons and customisations may also increase the price.
-                        Final pricing will be discussed after your enquiry is submitted.
-                    </small>
-                </p>
-
-                <a href="enquiry.html">Enquire about cupcakes</a>
-            </div>
-            </section>
-
-             <section class="product-category">
-            <h2>Bento Cakes</h2>
 
                 <div class="product-images">
-                    <img src="Images/bento1.jpg"  alt="Cute personalised 4-inch bento cake" width="300">
+                    <img src="Images/cupcakes-box-6.jpeg" alt="Box of 6 assorted cupcakes" width="300">
 
-                    <img src="Images/bento2.jpg" alt="Decorated 4-inch bento cake with personalised message" width="300">
+                    <img src="Images/cupcakes-box-12.jpg" alt="Box of 12 assorted cupcakes" width="300">
+                </div>
+
+                <div class="product-info">
+                    <p>
+                        Sweet, freshly baked cupcakes made for celebrations,
+                        gifts and everyday treats.
+                    </p>
+
+                    <p>
+                        Available in boxes of 6 or 12.
+                    </p>
+
+                    <p>
+                        Box of 6: from R180<br>
+                        Box of 12: from R340
+                    </p>
+
+                    <p>
+                        <small>
+                            Flavour choices may affect the final price.
+                            Boxes of 12 may include up to 2 flavours.
+                            Additional add-ons and customisations may also increase the price.
+                            Final pricing will be discussed after your enquiry is submitted.
+                        </small>
+                    </p>
+
+                    <a href="enquiry.html">Enquire about cupcakes</a>
+                </div>
+            </section>
+
+            <section class="product-category">
+                <h2>Bento Cakes</h2>
+
+                <div class="product-images">
+                    <img src="Images/piggy-bento-cake1.jpg" alt="Cute personalised 4-inch bento cake" width="300">
+
+                    <img src="Images/blue-calender-bento-cake2.jpg" alt="Decorated 4-inch bento cake with personalised message"
+                        width="300">
                 </div>
 
                 <div class="product-info">
@@ -108,96 +148,97 @@
                 </div>
             </section>
 
-        <section class="product-category">
-            <h2>Custom Cakes</h2>
+            <section class="product-category">
+                <h2>Custom Cakes</h2>
 
-            <div class="product-images">
-                <img src="Images/custom1.jpg" alt="Heart-shaped custom cake" width="300">
+                <div class="product-images">
+                    <img src="Images/heart-custom-cake1.jpg" alt="Heart-shaped custom cake" width="300">
 
-                <img src="Images/custom2.jpg" alt="Personalised custom cake" width="300">
+                    <img src="Images/babyshower-custom-cake2.jpg" alt="Personalised custom cake" width="300">
 
-                <img src="Images/custom3.jpg" alt="Round decorated custom cake" width="300">
-            </div>
+                    <img src="Images/pink-custom-cake3.jpg" alt="Round decorated custom cake" width="300">
+                </div>
 
-            <div class="product-info">
-                <p>
-                    Personalised 6-inch cakes made for birthdays,
-                    celebrations and special moments.
-                </p>
+                <div class="product-info">
+                    <p>
+                        Personalised 6-inch cakes made for birthdays,
+                        celebrations and special moments.
+                    </p>
 
-                <p>
-                    Available in round or heart-shaped designs.
-                </p>
+                    <p>
+                        Available in round or heart-shaped designs.
+                    </p>
 
-                <p>
-                    6-inch Custom Cake: from R450
-                </p>
+                    <p>
+                        6-inch Custom Cake: from R450
+                    </p>
 
-                <p>
-                    Choose your preferred flavour, filling and design.
-                    Edible images and cake toppers are also available as add-ons.
-                </p>
+                    <p>
+                        Choose your preferred flavour, filling and design.
+                        Edible images and cake toppers are also available as add-ons.
+                    </p>
 
-                <p>
-                    <small>
-                        Additional flavours, fillings, decorations and customisations may increase 
-                        the final price. Final pricing will be discussed after your enquiry is submitted.
-                    </small>
-                </p>
+                    <p>
+                        <small>
+                            Additional flavours, fillings, decorations and customisations may increase
+                            the final price. Final pricing will be discussed after your enquiry is submitted.
+                        </small>
+                    </p>
 
-                <a href="enquiry.html">Enquire about custom cakes</a>
-            </div>
+                    <a href="enquiry.html">Enquire about custom cakes</a>
+                </div>
 
-        </section>
+            </section>
 
-        <section class="product-category">
+            <section class="product-category">
 
-            <h2>Desserts</h2>
+                <h2>Desserts</h2>
 
-            <div class="product-images">
-                <img src="Images/banana-loaf.jpg" alt="Banana loaf" width="300">
+                <div class="product-images">
+                    <img src="Images/banana-loaf.jpg" alt="Banana loaf" width="300">
 
-                <img src="Images/brownies.jpg" alt="Chocolate brownies" width="300">
-            </div>
+                    <img src="Images/brownies.jpg" alt="Chocolate brownies" width="300">
+                </div>
 
-            <div class="product-info">
-                <p>
-                    Freshly baked desserts made for everyday treats, gifts and sweet cravings.
-                </p>
+                <div class="product-info">
+                    <p>
+                        Freshly baked desserts made for everyday treats, gifts and sweet cravings.
+                    </p>
 
-                <p>
-                    Banana Loaf: from R80
-                </p>
+                    <p>
+                        Banana Loaf: from R80
+                    </p>
 
-                <p>
-                    Plain Brownies (3): from R90<br>
-                    Chocolate-Coated Brownies (3): from R100<br>
-                    Premium Brownie Trio (3): from R120
-                </p>
+                    <p>
+                        Plain Brownies (3): from R90<br>
+                        Chocolate-Coated Brownies (3): from R100<br>
+                        Premium Brownie Trio (3): from R120
+                    </p>
 
-                <p>
-                    Our Premium Brownie Trio includes:
-                    Cookies and Cream, S'mores and Chocolate Smarties.
-                </p>
+                    <p>
+                        Our Premium Brownie Trio includes:
+                        Cookies and Cream, S'mores and Chocolate Smarties.
+                    </p>
 
-                <p>
-                    <small>
-                        Prices may vary depending on size, flavour, toppings
-                        and additional customisations. Final pricing will be
-                        discussed after your enquiry is submitted.
-                    </small>
-                </p>
+                    <p>
+                        <small>
+                            Prices may vary depending on size, flavour, toppings
+                            and additional customisations. Final pricing will be
+                            discussed after your enquiry is submitted.
+                        </small>
+                    </p>
 
-                <a href="enquiry.html">Enquire about desserts</a>
-            </div>
-        </section>
+                    <a href="enquiry.html">Enquire about desserts</a>
+                </div>
+            </section>
+        </div>
 
-            <div class="products-cta">
-                <h3>Ready to order?</h3>
-                <p>Send us an enquiry and let us know what you would like to try.</p>
-                <a href="enquiry.html">Enquire</a>
-            </div>
-        </main>
+        <div class="products-cta">
+            <h3>Ready to order?</h3>
+            <p>Send us an enquiry and let us know what you would like to try.</p>
+            <a href="enquiry.html">Enquire</a>
+        </div>
+    </main>
 
     <footer>
         <p>A little sprinkle of sweetness.</p>
@@ -205,8 +246,9 @@
         <address>
             Klipfontein View, Midrand, 1685
         </address>
-        
-         <p>© 2026 Sprinkle Sprinkle. All Rights Reserved.</p>
+
+        <p>© 2026 Sprinkle Sprinkle. All Rights Reserved.</p>
     </footer>
-    </body>
+</body>
+
 </html>

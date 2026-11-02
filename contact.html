@@ -7,22 +7,32 @@
 
     <!-- Makes the page fit correctly on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    <title>Contact Us</title>
+    <title>Contact Us | Sprinkle Sprinkle, Midrand</title>
+    <meta name="description"
+        content="Contact Sprinkle Sprinkle in Midrand. Send us a message, find us on the map or get directions for cake orders and questions.">
+    <meta name="keywords" content="contact Sprinkle Sprinkle, bakery Midrand, cake orders, bakery directions Midrand">
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body class="page-contact">
 
     <header>
 
-          <!-- Logo links back to the Home page -->
+        <!-- Logo links back to the Home page -->
         <a href="index.html">
             <img src="Images/Logo.png" width="100" alt="Sprinkle Sprinkle logo">
-         </a>
+        </a>
 
         <!-- Navigation -->
         <nav>
@@ -71,6 +81,83 @@
                 </p>
 
             </address>
+
+        </section>
+
+        <!-- Map -->
+        <section class="section">
+
+            <h2>Find Us</h2>
+
+            <p>
+                Visit us in Midrand. Zoom in, look around, or find out how far away you are.
+            </p>
+
+            <div id="map" class="map" role="region" aria-label="Map showing the Sprinkle Sprinkle location in Midrand">
+                <p>The map could not load. You can find us at Klipfontein View, Midrand, 1685.</p>
+            </div>
+
+            <div class="map-actions">
+                <button type="button" id="locate-me" class="map-button">How far am I from you?</button>
+                <a id="directions-link" class="map-link"
+                    href="https://www.google.com/maps/search/?api=1&query=Klipfontein+View+Midrand" target="_blank"
+                    rel="noopener">Get directions</a>
+            </div>
+
+            <p id="map-status" class="map-status" role="status"></p>
+
+        </section>
+
+        <!-- Contact form -->
+        <section class="section">
+
+            <h2>Send Us a Message</h2>
+
+            <p>
+                Have a general question or want to say hello? Fill in the form
+                and we will prepare an email for you to send.
+            </p>
+
+            <form class="contact-form" action="https://formsubmit.co/ajax/katlegocm02@gmail.com" method="POST">
+
+                <div>
+                    <label for="msg-name">Full Name:</label>
+                    <input type="text" id="msg-name" name="name" placeholder="Please enter your name"
+                        autocomplete="name" required>
+                </div>
+
+                <div>
+                    <label for="msg-email">Email Address:</label>
+                    <input type="email" id="msg-email" name="email" placeholder="abc@gmail.com" autocomplete="email"
+                        required>
+                </div>
+
+                <div>
+                    <label for="msg-phone">Contact Number (optional):</label>
+                    <input type="tel" id="msg-phone" name="phone" placeholder="071 234 5678" autocomplete="tel">
+                </div>
+
+                <div>
+                    <label for="msg-type">Type of Message:</label>
+                    <select id="msg-type" name="message-type" required>
+                        <option value="">Please select a message type</option>
+                        <option value="General question">General question</option>
+                        <option value="Custom cake or order question">Custom cake or order question</option>
+                        <option value="Delivery or collection">Delivery or collection</option>
+                        <option value="Feedback or compliment">Feedback or compliment</option>
+                        <option value="Complaint">Complaint</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="msg-text">Your Message:</label>
+                    <textarea id="msg-text" name="message" rows="6" maxlength="800"
+                        placeholder="Type your message here (at least 10 characters)." required></textarea>
+                </div>
+
+                <button type="submit">Send</button>
+            </form>
 
         </section>
 
