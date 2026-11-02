@@ -17,6 +17,7 @@ The business does not currently have a website. The purpose of this project is t
 
 This repository contains Parts 1, 2 and 3 of the Website Project POE. ***Part 1*** focused on planning, research, content gathering and building the HTML structure of the website. ***Part 2*** focused on CSS styling and responsive design. ***Part 3*** focused on adding JavaScript functionality, form validation, user interaction and SEO improvements.
 
+**Live Website:** [Sprinkle Sprinkle](https://katlegochrista.github.io/ST10501473-WEDE5020w_POE)
 ---
 
 ## Website Goals and Objectives
